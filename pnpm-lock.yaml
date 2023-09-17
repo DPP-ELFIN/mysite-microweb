@@ -1,8 +1,4 @@
-lockfileVersion: '6.1'
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
+lockfileVersion: '6.0'
 
 importers:
 
@@ -19,10 +15,19 @@ importers:
       vue:
         specifier: ^3.3.4
         version: registry.npmmirror.com/vue@3.3.4
+      vue-router:
+        specifier: ^4.2.4
+        version: registry.npmmirror.com/vue-router@4.2.4(vue@3.3.4)
+      wujie:
+        specifier: ^1.0.18
+        version: registry.npmmirror.com/wujie@1.0.18
       wujie-vue3:
         specifier: ^1.0.18
         version: registry.npmmirror.com/wujie-vue3@1.0.18(vue@3.3.4)
     devDependencies:
+      '@types/node':
+        specifier: ^20.6.2
+        version: registry.npmmirror.com/@types/node@20.6.2
       '@vitejs/plugin-vue':
         specifier: ^4.2.3
         version: registry.npmmirror.com/@vitejs/plugin-vue@4.2.3(vite@4.4.5)(vue@3.3.4)
@@ -31,7 +36,7 @@ importers:
         version: registry.npmmirror.com/typescript@5.0.2
       vite:
         specifier: ^4.4.5
-        version: registry.npmmirror.com/vite@4.4.5
+        version: registry.npmmirror.com/vite@4.4.5(@types/node@20.6.2)
       vue-tsc:
         specifier: ^1.8.5
         version: registry.npmmirror.com/vue-tsc@1.8.5(typescript@5.0.2)
@@ -77,7 +82,7 @@ importers:
         version: registry.npmmirror.com/typescript@5.0.2
       vite:
         specifier: ^4.4.5
-        version: registry.npmmirror.com/vite@4.4.5
+        version: registry.npmmirror.com/vite@4.4.5(@types/node@20.6.2)
 
   web/mySite-vue3:
     dependencies:
@@ -96,7 +101,7 @@ importers:
         version: registry.npmmirror.com/typescript@5.0.2
       vite:
         specifier: ^4.4.5
-        version: registry.npmmirror.com/vite@4.4.5
+        version: registry.npmmirror.com/vite@4.4.5(@types/node@20.6.2)
       vue-tsc:
         specifier: ^1.8.5
         version: registry.npmmirror.com/vue-tsc@1.8.5(typescript@5.0.2)
@@ -778,6 +783,12 @@ packages:
     version: 7.0.12
     dev: true
 
+  registry.npmmirror.com/@types/node@20.6.2:
+    resolution: {integrity: sha512-Y+/1vGBHV/cYk6OI1Na/LHzwnlNCAfU3ZNGrc1LdRe/LAIbdDPTTv/HU3M7yXN448aTVDq3eKRm2cg7iKLb8gw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-20.6.2.tgz}
+    name: '@types/node'
+    version: 20.6.2
+    dev: true
+
   registry.npmmirror.com/@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/prop-types/-/prop-types-15.7.5.tgz}
     name: '@types/prop-types'
@@ -982,7 +993,7 @@ packages:
       '@babel/plugin-transform-react-jsx-self': registry.npmmirror.com/@babel/plugin-transform-react-jsx-self@7.22.5(@babel/core@7.22.19)
       '@babel/plugin-transform-react-jsx-source': registry.npmmirror.com/@babel/plugin-transform-react-jsx-source@7.22.5(@babel/core@7.22.19)
       react-refresh: registry.npmmirror.com/react-refresh@0.14.0
-      vite: registry.npmmirror.com/vite@4.4.5
+      vite: registry.npmmirror.com/vite@4.4.5(@types/node@20.6.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -997,7 +1008,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmmirror.com/vite@4.4.5
+      vite: registry.npmmirror.com/vite@4.4.5(@types/node@20.6.2)
       vue: registry.npmmirror.com/vue@3.3.4
     dev: true
 
@@ -1066,6 +1077,12 @@ packages:
     dependencies:
       '@vue/compiler-dom': registry.npmmirror.com/@vue/compiler-dom@3.3.4
       '@vue/shared': registry.npmmirror.com/@vue/shared@3.3.4
+
+  registry.npmmirror.com/@vue/devtools-api@6.5.0:
+    resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.5.0.tgz}
+    name: '@vue/devtools-api'
+    version: 6.5.0
+    dev: false
 
   registry.npmmirror.com/@vue/language-core@1.8.5(typescript@5.0.2):
     resolution: {integrity: sha512-DKQNiNQzNV7nrkZQujvjfX73zqKdj2+KoM4YeKl+ft3f+crO3JB4ycPnmgaRMNX/ULJootdQPGHKFRl5cXxwaw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/language-core/-/language-core-1.8.5.tgz}
@@ -2516,8 +2533,9 @@ packages:
       punycode: registry.npmmirror.com/punycode@2.3.0
     dev: true
 
-  registry.npmmirror.com/vite@4.4.5:
+  registry.npmmirror.com/vite@4.4.5(@types/node@20.6.2):
     resolution: {integrity: sha512-4m5kEtAWHYr0O1Fu7rZp64CfO1PsRGZlD3TAB32UmQlpd7qg15VF7ROqGN5CyqN7HFuwr7ICNM2+fDWRqFEKaA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.4.5.tgz}
+    id: registry.npmmirror.com/vite/4.4.5
     name: vite
     version: 4.4.5
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2546,12 +2564,25 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': registry.npmmirror.com/@types/node@20.6.2
       esbuild: registry.npmmirror.com/esbuild@0.18.20
       postcss: registry.npmmirror.com/postcss@8.4.29
       rollup: registry.npmmirror.com/rollup@3.29.1
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents@2.3.3
     dev: true
+
+  registry.npmmirror.com/vue-router@4.2.4(vue@3.3.4):
+    resolution: {integrity: sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.2.4.tgz}
+    id: registry.npmmirror.com/vue-router/4.2.4
+    name: vue-router
+    version: 4.2.4
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api@6.5.0
+      vue: registry.npmmirror.com/vue@3.3.4
+    dev: false
 
   registry.npmmirror.com/vue-template-compiler@2.7.14:
     resolution: {integrity: sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-template-compiler/-/vue-template-compiler-2.7.14.tgz}
@@ -2642,3 +2673,7 @@ packages:
     version: 0.1.0
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
