@@ -1,7 +1,14 @@
-/** @format */
+import { BASE_URL, TIME_OUT } from "./config";
+import MYRequest from "./request";
 
-import axios from "axios";
+const request = new MYRequest({
+  baseURL: BASE_URL,
+  timeout: TIME_OUT,
+  interceptors: {
+    requestSuccessFn: (config) => {
+      return config;
+    },
+  },
+});
 
-export const getRes = (url: string) => axios.get(url);
-
-export const a = (url: string) => axios.post(url);
+export default request;
