@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { AxiosInstance } from "axios";
+import type { AxiosInstance, InternalAxiosRequestConfig } from "axios";
 import type { MYRequestConfig } from "./type";
 
 class MYRequest {
@@ -74,6 +74,14 @@ class MYRequest {
   }
   patch<T = any>(config: MYRequestConfig<T>) {
     return this.request({ ...config, method: "PATCH" });
+  }
+
+  upload<T = any>(config: MYRequestConfig<T>) {
+    const newConfig = {
+      ...config,
+      headers: { "Content-Type": "multipart/form-data" },
+    };
+    return this.request({ ...newConfig, method: "POST" });
   }
 }
 
