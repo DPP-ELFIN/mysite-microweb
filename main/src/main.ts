@@ -4,6 +4,8 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import WujieVue from "wujie-vue3";
 import router from "./router";
+import "normalize.css";
+import "@/assets/css/index.css";
 // import {preloadApp} from 'wujie'
 
 const { preloadApp } = WujieVue;

@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 importers:
 
@@ -12,6 +16,9 @@ importers:
 
   main:
     dependencies:
+      normalize.css:
+        specifier: ^8.0.1
+        version: registry.npmmirror.com/normalize.css@8.0.1
       vue:
         specifier: ^3.3.4
         version: registry.npmmirror.com/vue@3.3.4
@@ -92,7 +99,19 @@ importers:
       vue:
         specifier: ^3.3.4
         version: registry.npmmirror.com/vue@3.3.4
+      vue-router:
+        specifier: ^4.2.4
+        version: registry.npmmirror.com/vue-router@4.2.4(vue@3.3.4)
+      wujie:
+        specifier: ^1.0.18
+        version: registry.npmmirror.com/wujie@1.0.18
+      wujie-vue3:
+        specifier: ^1.0.18
+        version: registry.npmmirror.com/wujie-vue3@1.0.18(vue@3.3.4)
     devDependencies:
+      '@types/node':
+        specifier: ^20.6.2
+        version: registry.npmmirror.com/@types/node@20.6.2
       '@vitejs/plugin-vue':
         specifier: ^4.2.3
         version: registry.npmmirror.com/@vitejs/plugin-vue@4.2.3(vite@4.4.5)(vue@3.3.4)
@@ -2165,6 +2184,12 @@ packages:
     version: 2.0.13
     dev: true
 
+  registry.npmmirror.com/normalize.css@8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/normalize.css/-/normalize.css-8.0.1.tgz}
+    name: normalize.css
+    version: 8.0.1
+    dev: false
+
   registry.npmmirror.com/once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/once/-/once-1.4.0.tgz}
     name: once
@@ -2673,7 +2698,3 @@ packages:
     version: 0.1.0
     engines: {node: '>=10'}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false

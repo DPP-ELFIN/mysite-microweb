@@ -1,0 +1,21 @@
+/** @format */
+
+.home {
+  height: 100vh;
+  background-image: url("../img/sso_login_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  padding: 5px 70px;
+  background: rgb(103, 194, 58);
+  border: none;
+  margin: 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
