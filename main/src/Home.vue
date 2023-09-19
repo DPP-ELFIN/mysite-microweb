@@ -3,14 +3,15 @@
         <!-- <router-link to="/vue3">vue3</router-link> -->
         <button @click="goVue3">vue3</button>
         <button @click="goReact">react</button>
-        <Notification />
+        <button @click="goNuxt">Nuxt</button>
+        <!-- <Notification /> -->
     </div>
 </template>
 
 
 <script setup lang='ts'>
 import { useRouter } from 'vue-router'
-import Notification from './components/Notification.vue';
+// import Notification from './components/Notification.vue';
 
 const router = useRouter()
 
@@ -19,6 +20,9 @@ const goVue3 = () => {
 }
 const goReact = () => {
     router.push('/react')
+}
+const goNuxt = () => {
+    router.push('/nuxt')
 }
 
 </script>

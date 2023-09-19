@@ -17,6 +17,10 @@ const router = createRouter({
       path: "/react",
       component: () => import("@/components/react.vue"),
     },
+    {
+      path: "/nuxt",
+      component: () => import("@/components/Nuxt.vue"),
+    },
   ],
 });
 
