@@ -15,7 +15,9 @@ const App: FC<IProps> = () => {
     <div className="app">
       <AppHeader />
       <Suspense>
-        <div className="main">123</div>
+        <div className="main">
+          <code>var abv = 123</code>
+        </div>
       </Suspense>
       <AppFooter />
     </div>

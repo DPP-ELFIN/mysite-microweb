@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "animate.css": "^4.1.1",
+    "antd": "^5.9.1",
     "common": "workspace:^",
     "less": "^4.2.0",
     "normalize.css": "^8.0.1",

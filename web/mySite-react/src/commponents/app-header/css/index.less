@@ -1,0 +1,25 @@
+/** @format */
+
+.app_header {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    .left {
+      cursor: pointer;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .menu {
+        z-index: 99999;
+        cursor: pointer;
+        font-size: 2em;
+        color: black;
+      }
+    }
+  }
+}
