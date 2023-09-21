@@ -3,6 +3,7 @@
 import React, { memo } from "react";
 import type { FC, ReactNode } from "react";
 import "../css/mask.less";
+import { Link } from "react-router-dom";
 
 /** @format */
 interface IProps {
@@ -15,9 +16,15 @@ const Mask: FC<IProps> = (props) => {
     <div className={"mask animate__animated animate__bounceInDown"} style={{ display: props.isOpen ? "block" : "none" }}>
       <div className="mask_list">
         <div className="mask_main">
-          <h1 style={{ color: "red" }}>My</h1>
-          <h1>About</h1>
-          <h1>Blob</h1>
+          <Link to="/my">
+            <h1 style={{ color: "red" }}>My</h1>
+          </Link>
+          <Link to="/about">
+            <h1>About</h1>
+          </Link>
+          <Link to="/work">
+            <h1>work</h1>
+          </Link>
         </div>
       </div>
     </div>

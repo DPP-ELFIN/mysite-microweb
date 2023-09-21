@@ -22,10 +22,10 @@ const AppFooter: FC<IProps> = () => {
           </ul>
         </div>
         <div className="link">
-          <a href="https://github.com/DPP-ELFIN"></a>
+          <a href="https://github.com/DPP-ELFIN" target="_blank"></a>
         </div>
         <div className="record">
-          <a href="https://beian.miit.gov.cn">@本网站已备案：粤ICP备2023050388号-1</a>
+          <a href="https://beian.miit.gov.cn">©本网站已备案：粤ICP备2023050388号-1</a>
         </div>
       </div>
     </div>
