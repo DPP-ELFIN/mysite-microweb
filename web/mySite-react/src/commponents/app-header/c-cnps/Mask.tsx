@@ -22,9 +22,12 @@ const Mask: FC<IProps> = (props) => {
           <Link to="/blog">
             <h1>Blog</h1>
           </Link>
-          <Link to="/work">
-            <h1>work</h1>
+          <Link to="/tools">
+            <h1>Tools</h1>
           </Link>
+          {/* <Link to="/work">
+            <h1>work</h1>
+          </Link> */}
         </div>
       </div>
     </div>
