@@ -19,8 +19,8 @@ const Mask: FC<IProps> = (props) => {
           <Link to="/my">
             <h1 style={{ color: "red" }}>My</h1>
           </Link>
-          <Link to="/about">
-            <h1>About</h1>
+          <Link to="/blog">
+            <h1>Blog</h1>
           </Link>
           <Link to="/work">
             <h1>work</h1>

@@ -1,0 +1,60 @@
+/** @format */
+
+.blog {
+  position: relative;
+  display: flex;
+  .directory {
+    position: absolute;
+    width: calc((100vw - 1100px) / 2);
+    padding: 0 20px;
+    box-sizing: border-box;
+    .directory_list {
+      li {
+        display: flex;
+        font-size: 25px;
+        // box-sizing: border-box;
+        padding: 10px 0;
+        cursor: pointer;
+      }
+      li::before {
+        content: "\0020";
+        width: 5px;
+        margin-right: 20px;
+        background-color: red;
+      }
+      li:hover {
+        // background-color: blue;
+        font-size: 26px;
+      }
+    }
+  }
+  .blog_menu {
+    .blog_container {
+      display: flex;
+      flex-wrap: wrap;
+      .card {
+        width: 50%;
+        word-break: keep-all;
+        padding: 20px;
+        box-sizing: border-box;
+        h1 {
+          font-size: 70px;
+          color: red;
+          font-size: 33px;
+        }
+        h2 {
+          color: black;
+          margin-bottom: 20px;
+        }
+        span {
+          font-size: 20px;
+          color: #8d8d8d;
+          display: block;
+        }
+        .span-1 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
