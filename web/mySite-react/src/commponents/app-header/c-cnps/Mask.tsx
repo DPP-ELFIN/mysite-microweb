@@ -16,13 +16,13 @@ const Mask: FC<IProps> = (props) => {
     <div className={"mask animate__animated animate__bounceInDown"} style={{ display: props.isOpen ? "block" : "none" }}>
       <div className="mask_list">
         <div className="mask_main">
-          <Link to="/my">
+          <Link to="/layout/my">
             <h1 style={{ color: "red" }}>My</h1>
           </Link>
-          <Link to="/blog">
+          <Link to="/layout/blog">
             <h1>Blog</h1>
           </Link>
-          <Link to="/tools">
+          <Link to="/layout/tools">
             <h1>Tools</h1>
           </Link>
           {/* <Link to="/work">

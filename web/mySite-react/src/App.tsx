@@ -2,13 +2,14 @@
 
 import { memo, Suspense } from "react";
 import type { FC, ReactNode } from "react";
-import AppHeader from "./commponents/app-header";
-import AppFooter from "./commponents/app-footer";
+// import AppHeader from "./commponents/app-header";
+// import AppFooter from "./commponents/app-footer";
 import "@/assets/css/app.less";
 import { useRoutes } from "react-router-dom";
 import routes from "./router";
-import { FloatButton } from "antd";
-import { CommentOutlined, ToolOutlined } from "@ant-design/icons";
+// import Tools from "./commponents/tools";
+import Layout from "./commponents/layout";
+import { Outlet } from "react-router-dom";
 
 /** @format */
 interface IProps {
@@ -18,15 +19,15 @@ interface IProps {
 const App: FC<IProps> = () => {
   return (
     <div className="app">
-      <AppHeader />
+      {/* <AppHeader />
       <Suspense fallback="loading...">
         <div className="main">{useRoutes(routes)}</div>
-        <FloatButton.Group trigger="hover" type="primary" style={{ right: 94 }} icon={<ToolOutlined />}>
-          <FloatButton />
-          {/* <FloatButton icon={<CommentOutlined />} /> */}
-        </FloatButton.Group>
+        <Tools />
       </Suspense>
-      <AppFooter />
+      <AppFooter /> */}
+      {/* <Layout /> */}
+      {/* <Outlet /> */}
+      {useRoutes(routes)}
     </div>
   );
 };
