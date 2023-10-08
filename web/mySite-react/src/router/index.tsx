@@ -8,7 +8,7 @@ const Work = React.lazy(() => import("@/views/work"));
 const My = React.lazy(() => import("@/views/my"));
 const About = React.lazy(() => import("@/views/about"));
 const Tools = React.lazy(() => import("@/views/tools"));
-const FullEditors = React.lazy(() => import("@/views/fullEditors"));
+const FullEditors = React.lazy(() => import("@/commponents/fullEditors"));
 
 const routes: RouteObject[] = [
   {
