@@ -116,16 +116,15 @@ const list: IWaterItem[] = [
 ];
 
 const Menu: FC<IProps> = () => {
-  // const waterList: IWaterItem[] = [];
   const [waterList, setWaterList] = useState<IWaterItem[]>([]);
   const heightList: any[] = [];
   const init = () => {
     const width = document.querySelector(".blog_container")!.clientWidth / 2;
     const x = document.querySelector(".blog_container")!.clientWidth;
     const column = Math.floor(x / width);
+    const copy = [...waterList];
     for (let i = 0; i < list.length; i++) {
-      const copy = [...waterList];
-      if (i < 2) {
+      if (i < column) {
         list[i].left = i * width;
         list[i].top = 0;
         copy.push(list[i]);
@@ -135,7 +134,6 @@ const Menu: FC<IProps> = () => {
       } else {
         let current = heightList[0];
         let index = 0;
-
         heightList.forEach((h, i) => {
           if (current > h) {
             current = h;
@@ -147,17 +145,28 @@ const Menu: FC<IProps> = () => {
         heightList[index] = heightList[index] + list[i].height + 20;
         copy.push(list[i]);
         setWaterList([...copy]);
-        // waterList.push(list[i]);
       }
     }
   };
-  useEffect(() => {
-    init();
-  });
-  useEffect(() => {}, [waterList]);
-  const renderWaterList = () => {
-    console.log(1, waterList);
 
+  const setWarp = async () => {
+    const warp: HTMLElement = document.querySelector(".blog_container .warp") as HTMLElement;
+    // const nodesList: NodeListOf<HTMLElement> = (await warp.childNodes) as NodeListOf<HTMLElement>;
+    // let height = 0;
+    // nodesList.forEach((el: HTMLElement, index: number) => {
+    //   // console.log(el.clientHeight);
+    //   // console.log(heightList);
+    // });
+    warp.style.height = heightList[0] + "px";
+    warp.style.padding = "0 0  20px 0";
+  };
+
+  useLayoutEffect(() => {
+    init();
+    setWarp();
+  }, []);
+
+  const renderWaterList = () => {
     return waterList.map((el: IWaterItem, index: number) => {
       return <div className="item" key={index} style={{ height: el.height, background: el.background, top: el.top, left: el.left }}></div>;
     });
