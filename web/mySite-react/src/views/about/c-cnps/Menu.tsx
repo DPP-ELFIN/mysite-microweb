@@ -114,6 +114,7 @@ const list: IWaterItem[] = [
     background: "red",
   },
 ];
+console.log(typeof null);
 
 const Menu: FC<IProps> = () => {
   const [waterList, setWaterList] = useState<IWaterItem[]>([]);
@@ -168,7 +169,16 @@ const Menu: FC<IProps> = () => {
 
   const renderWaterList = () => {
     return waterList.map((el: IWaterItem, index: number) => {
-      return <div className="item" key={index} style={{ height: el.height, background: el.background, top: el.top, left: el.left }}></div>;
+      return (
+        <div className="item" key={index} style={{ height: el.height, top: el.top, left: el.left }}>
+          {/* <div className="card"> */}
+          <Card hoverable={true} cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
+            <span className="span-1">在空闲时间，我喜欢编码、羽毛球、游戏和结识新朋友。</span>
+            <span className="span-2">想一起做点什么吗？或者说是有什么关于技术上的疑问？只要给我发电子邮件。扫描二维码在微信上添加我。知无不言！</span>
+          </Card>
+          {/* </div> */}
+        </div>
+      );
     });
   };
   return (

@@ -1,8 +1,4 @@
-lockfileVersion: '6.1'
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
+lockfileVersion: '6.0'
 
 importers:
 
@@ -83,6 +79,9 @@ importers:
       react-router-dom:
         specifier: ^6.16.0
         version: registry.npmmirror.com/react-router-dom@6.16.0(react-dom@18.2.0)(react@18.2.0)
+      turndown:
+        specifier: ^7.1.2
+        version: registry.npmmirror.com/turndown@7.1.2
     devDependencies:
       '@types/react':
         specifier: ^18.2.15
@@ -90,6 +89,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.7
         version: registry.npmmirror.com/@types/react-dom@18.2.7
+      '@types/turndown':
+        specifier: ^5.0.2
+        version: registry.npmmirror.com/@types/turndown@5.0.2
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.0.0
         version: registry.npmmirror.com/@typescript-eslint/eslint-plugin@6.0.0(@typescript-eslint/parser@6.0.0)(eslint@8.45.0)(typescript@5.0.2)
@@ -2504,6 +2506,12 @@ packages:
     version: 4.0.3
     dev: false
 
+  registry.npmmirror.com/@types/turndown@5.0.2:
+    resolution: {integrity: sha512-ghbjIyvMSQn/UGEuQJD6C4DfbokyYqGRhNAetWH02qnuRfvRZz9qTOG9e0RPkVqGsjv+YsjF3gRp7yFKvc/1PA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/turndown/-/turndown-5.0.2.tgz}
+    name: '@types/turndown'
+    version: 5.0.2
+    dev: true
+
   registry.npmmirror.com/@types/use-sync-external-store@0.0.3:
     resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz}
     name: '@types/use-sync-external-store'
@@ -4404,6 +4412,12 @@ packages:
     dependencies:
       domelementtype: registry.npmmirror.com/domelementtype@2.3.0
     dev: true
+
+  registry.npmmirror.com/domino@2.1.6:
+    resolution: {integrity: sha512-3VdM/SXBZX2omc9JF9nOPCtDaYQ67BGp5CoLpIQlO2KCAPETs8TcDHacF26jXadGbvUteZzRTeos2fhID5+ucQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domino/-/domino-2.1.6.tgz}
+    name: domino
+    version: 2.1.6
+    dev: false
 
   registry.npmmirror.com/domutils@3.1.0:
     resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domutils/-/domutils-3.1.0.tgz}
@@ -9822,6 +9836,14 @@ packages:
       - supports-color
     dev: true
 
+  registry.npmmirror.com/turndown@7.1.2:
+    resolution: {integrity: sha512-ntI9R7fcUKjqBP6QU8rBK2Ehyt8LAzt3UBT9JR9tgo6GtuKvyUzpayWmeMKJw1DPdXzktvtIT8m2mVXz+bL/Qg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turndown/-/turndown-7.1.2.tgz}
+    name: turndown
+    version: 7.1.2
+    dependencies:
+      domino: registry.npmmirror.com/domino@2.1.6
+    dev: false
+
   registry.npmmirror.com/type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/type-check/-/type-check-0.4.0.tgz}
     name: type-check
@@ -10798,3 +10820,7 @@ packages:
       compress-commons: registry.npmmirror.com/compress-commons@5.0.1
       readable-stream: registry.npmmirror.com/readable-stream@3.6.2
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
