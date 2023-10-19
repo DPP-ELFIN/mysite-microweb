@@ -5,11 +5,11 @@
 import React, { memo, useEffect, useLayoutEffect, useState } from "react";
 import type { FC, ReactNode } from "react";
 import "./css/index.less";
-import type { CollapseProps, TreeProps } from "antd";
+import { CollapseProps, Divider, Menu, MenuProps, TreeProps } from "antd";
 import { Collapse, Tree } from "antd";
 import TurndownService from "turndown";
 import { useHeadsList, useParseHeads } from "./hooks/index";
-import { DownOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, DownOutlined, MailOutlined, SettingOutlined } from "@ant-design/icons";
 import { DataNode } from "antd/es/tree";
 
 /** @format */
@@ -17,68 +17,32 @@ interface IProps {
   children?: ReactNode;
 }
 
-// interface window {
-//   tinymce: TinyMCE;
-// }
-
-const treeData1: DataNode[] = [
+const items: MenuProps["items"] = [
   {
-    title: "parent 1",
-    key: "0-0",
-    children: [
-      {
-        title: "parent 1-0",
-        key: "0-0-0",
-        children: [
-          {
-            title: "leaf",
-            key: "0-0-0-0",
-          },
-          {
-            title: "leaf",
-            key: "0-0-0-1",
-          },
-          {
-            title: "leaf",
-            key: "0-0-0-2",
-          },
-        ],
-      },
-      {
-        title: "parent 1-1",
-        key: "0-0-1",
-        children: [
-          {
-            title: "leaf",
-            key: "0-0-1-0",
-          },
-        ],
-      },
-      {
-        title: "parent 1-2",
-        key: "0-0-2",
-        children: [
-          {
-            title: "leaf",
-            key: "0-0-2-0",
-          },
-          {
-            title: "leaf",
-            key: "0-0-2-1",
-          },
-        ],
-      },
-    ],
+    label: "MD",
+    key: "MD",
+    icon: <MailOutlined />,
+  },
+  {
+    label: "HTML",
+    key: "HTML",
+    icon: <MailOutlined />,
   },
 ];
 
-const tinymce = (window as any).tinymce;
+const tinymce = window.tinymce;
 let editor: any = null;
 const turndownService = new TurndownService();
 const parser = new DOMParser();
+let toMd: HTMLDivElement;
+let toHtml: HTMLDivElement;
 
 const FullEditor: FC<IProps> = () => {
   const [treeData, setTreeData] = useState<DataNode[]>();
+  const [current, setCurrent] = useState("MD");
+  const [toMdContent, setToMdContent] = useState(""); // 新增状态来存储 Markdown 内容
+  const [toHtmlContent, setToHtmlContent] = useState("");
+
   useEffect(() => {
     tinymce.init({
       selector: "#mytextarea",
@@ -104,22 +68,37 @@ const FullEditor: FC<IProps> = () => {
       // 获取实时输入的内容
       let content = editor.getContent();
       // 在这里处理 content
-      const toMd: HTMLDivElement = document.querySelector(".to_md") as HTMLDivElement;
+      // const toMd: HTMLDivElement = document.querySelector(".to_md") as HTMLDivElement;
 
-      console.log(turndownService.turndown(content));
-      toMd.innerText = turndownService.turndown(content);
-      console.log(content);
+      // console.log(turndownService.turndown(content));
+      // toMd.innerText = turndownService.turndown(content);
+      // console.log(content);
       let doc = parser.parseFromString(content, "text/html");
 
       let heads: NodeListOf<HTMLHeadingElement> = doc.querySelectorAll("h1,h2,h3,h4,h5,h6");
       const headsList = useHeadsList(heads);
       const headTreeData = await useParseHeads(headsList);
       setTreeData(headTreeData);
+
+      // 更新 Markdown 内容
+      setToMdContent(turndownService.turndown(content));
     });
   }, []);
 
   const onSelect: TreeProps["onSelect"] = (selectedKeys, info) => {
     console.log("selected", selectedKeys, info);
+  };
+  const onClick: MenuProps["onClick"] = (e) => {
+    let content = editor.getContent();
+    if (e.key === "MD") {
+      // 设置 Markdown 内容
+      setToMdContent(turndownService.turndown(content));
+      setCurrent(e.key);
+    } else if (e.key === "HTML") {
+      // 设置 HTML 内容
+      setToHtmlContent(content);
+      setCurrent(e.key);
+    }
   };
 
   return (
@@ -127,7 +106,11 @@ const FullEditor: FC<IProps> = () => {
       <textarea name="" id="mytextarea"></textarea>
       <div className="right">
         <Tree showLine switcherIcon={<DownOutlined />} onSelect={onSelect} treeData={treeData} />
-        <div className="to_md"></div>
+        <div className="right_bottom">
+          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+          {/* {onMdOrHtml(current)} */}
+          {current === "MD" ? <div className="to_md">{toMdContent}</div> : <div className="to_html">{toHtmlContent}</div>}
+        </div>
       </div>
     </div>
   );

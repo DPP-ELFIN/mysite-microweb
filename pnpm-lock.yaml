@@ -79,6 +79,15 @@ importers:
       react-router-dom:
         specifier: ^6.16.0
         version: registry.npmmirror.com/react-router-dom@6.16.0(react-dom@18.2.0)(react@18.2.0)
+      react-split-grid:
+        specifier: ^1.0.4
+        version: registry.npmmirror.com/react-split-grid@1.0.4(react@18.2.0)
+      split-grid:
+        specifier: ^1.0.11
+        version: registry.npmmirror.com/split-grid@1.0.11
+      split.js:
+        specifier: ^1.6.5
+        version: registry.npmmirror.com/split.js@1.6.5
       turndown:
         specifier: ^7.1.2
         version: registry.npmmirror.com/turndown@7.1.2
@@ -8888,6 +8897,19 @@ packages:
       react: registry.npmmirror.com/react@18.2.0
     dev: false
 
+  registry.npmmirror.com/react-split-grid@1.0.4(react@18.2.0):
+    resolution: {integrity: sha512-RMEzFFnntgn+u5GFq+ognmv30CsTgrR97zB4RkMx2VSX9Sw8A7fjzCUfw/Avj7m8GCEw19GIjoUQGOQUOOjlcA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-split-grid/-/react-split-grid-1.0.4.tgz}
+    id: registry.npmmirror.com/react-split-grid/1.0.4
+    name: react-split-grid
+    version: 1.0.4
+    peerDependencies:
+      react: '*'
+    dependencies:
+      prop-types: registry.npmmirror.com/prop-types@15.8.1
+      react: registry.npmmirror.com/react@18.2.0
+      split-grid: registry.npmmirror.com/split-grid@1.0.11
+    dev: false
+
   registry.npmmirror.com/react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react/-/react-18.2.0.tgz}
     name: react
@@ -9460,6 +9482,18 @@ packages:
     name: spdx-license-ids
     version: 3.0.14
     dev: true
+
+  registry.npmmirror.com/split-grid@1.0.11:
+    resolution: {integrity: sha512-ELtFtxc3r5we5GZfe6Fi0BFFxIi2M6BY1YEntBscKRDD3zx4JVHqx2VnTRSQu1BixCYSTH3MTjKd4esI2R7EgQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/split-grid/-/split-grid-1.0.11.tgz}
+    name: split-grid
+    version: 1.0.11
+    dev: false
+
+  registry.npmmirror.com/split.js@1.6.5:
+    resolution: {integrity: sha512-mPTnGCiS/RiuTNsVhCm9De9cCAUsrNFFviRbADdKiiV+Kk8HKp/0fWu7Kr8pi3/yBmsqLFHuXGT9UUZ+CNLwFw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/split.js/-/split.js-1.6.5.tgz}
+    name: split.js
+    version: 1.6.5
+    dev: false
 
   registry.npmmirror.com/ssri@10.0.5:
     resolution: {integrity: sha512-bSf16tAFkGeRlUNDjXu8FzaMQt6g2HZJrun7mtMbIPOddxt3GLMSz5VWUWcqTJUPfLEaDIepGxv+bYQW49596A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ssri/-/ssri-10.0.5.tgz}
