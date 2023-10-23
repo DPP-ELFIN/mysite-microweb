@@ -5,11 +5,11 @@
 import React, { memo, useEffect, useLayoutEffect, useState } from "react";
 import type { FC, ReactNode } from "react";
 import "./css/index.less";
-import { CollapseProps, Divider, Menu, MenuProps, TreeProps } from "antd";
-import { Collapse, Tree } from "antd";
+import { Menu, MenuProps, TreeProps } from "antd";
+import { Tree } from "antd";
 import TurndownService from "turndown";
 import { useHeadsList, useParseHeads } from "./hooks/index";
-import { AppstoreOutlined, DownOutlined, MailOutlined, SettingOutlined } from "@ant-design/icons";
+import { DownOutlined, MailOutlined } from "@ant-design/icons";
 import { DataNode } from "antd/es/tree";
 
 /** @format */

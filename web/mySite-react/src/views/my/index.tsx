@@ -3,7 +3,7 @@
 import React, { memo } from "react";
 import type { FC, ReactNode } from "react";
 import { Card } from "antd";
-import wx from "@/assets/img/7ceaeecfd7db8ea3510fd98d84a20c0.jpg";
+// import wx from "@/assets/img/7ceaeecfd7db8ea3510fd98d84a20c0.jpg";
 
 import "./css/index.less";
 import Meta from "antd/es/card/Meta";
@@ -29,7 +29,7 @@ const Work: FC<IProps> = () => {
           </Card>
         </div>
         <div className="card animate__animated animate__fadeInLeft">
-          <Card hoverable cover={<img alt="WX" src={wx} />}>
+          <Card hoverable cover={<img alt="WX" src="/src/assets/img/7ceaeecfd7db8ea3510fd98d84a20c0.jpg" />}>
             <Meta title="My Email" description="1519037604@qq.com" />
           </Card>
         </div>
